@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "aws_jmespath_utils"
+version = "0.1.4"
+description = "jmespath custom functions for filtering AWS resources by tag"
+authors = ["Oguzhan Yilmaz <oguzhanylmz271@gmail.com>"]
+readme = "README.md"
+packages = [{include = "aws_jmespath_utils"}]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+jmespath = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
