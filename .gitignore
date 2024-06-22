@@ -2,7 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+ignore
+examples/02_filter_tags_exclude.py
 # C extensions
 *.so
 .vscode/
