@@ -29,6 +29,7 @@ jmespath.search(  # it's important that your expression array must be inside `` 
 )
 ```
 
+**Setting log levels**
 
 ```bash
 # set log level as you wish
