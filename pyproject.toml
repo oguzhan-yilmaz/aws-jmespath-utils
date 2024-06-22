@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "aws_jmespath_utils"
-version = "0.1.4"
+version = "0.1.13"
 description = "jmespath custom functions for filtering AWS resources by tag"
 authors = ["Oguzhan Yilmaz <oguzhanylmz271@gmail.com>"]
 readme = "README.md"
 packages = [{include = "aws_jmespath_utils"}]
 license = "Apache-2.0"
-
+exclude = ["tests/**", "examples/**", "dist/**", ".vscode/**", ".github/**"]
 [tool.poetry.dependencies]
 python = "^3.9"
 jmespath = "^1.0.1"
