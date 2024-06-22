@@ -10,7 +10,7 @@
                 "ImageId": "ami-04e601abe3e1a910f",
                 "InstanceId": "i-0f41e48e72204a6ba",
                 "InstanceType": "t2.micro",
-                "KeyName": "hepapi-oguzhan",
+                "KeyName": "*******-oguzhan",
                 "LaunchTime": "2023-05-29 15:54:31+00:00",
                 "Monitoring": {
                   "State": "disabled"
@@ -49,7 +49,7 @@
                 "EnaSupport": true,
                 "Hypervisor": "xen",
                 "IamInstanceProfile": {
-                  "Arn": "arn:aws:iam::995194808144:instance-profile/chatgpt-ec2-role",
+                  "Arn": "arn:aws:iam::123456789012:instance-profile/chatgpt-ec2-role",
                   "Id": "AIPA6PNR3U5IDUMOVR3IJ"
                 },
                 "NetworkInterfaces": [
@@ -77,7 +77,7 @@
                     "Ipv6Addresses": [],
                     "MacAddress": "02:2d:8b:17:a1:b8",
                     "NetworkInterfaceId": "eni-022e4f424f8db7638",
-                    "OwnerId": "995194808144",
+                    "OwnerId": "123456789012",
                     "PrivateDnsName": "ip-.eu-central-1.compute.internal",
                     "PrivateIpAddress": "",
                     "PrivateIpAddresses": [
@@ -111,7 +111,7 @@
                 "Tags": [
                   {
                     "Key": "Name",
-                    "Value": "CHATGPT-UI-hepapi"
+                    "Value": "CHATGPT-UI-*******"
                   },
                   {
                     "Key": "Test",
@@ -154,7 +154,7 @@
                 "CurrentInstanceBootMode": "legacy-bios"
               }
             ],
-            "OwnerId": "995194808144",
+            "OwnerId": "123456789012",
             "ReservationId": "r-04a1fece3711018a0"
           },
           {
@@ -165,7 +165,7 @@
                 "ImageId": "ami-0faab6bdbac9486fb",
                 "InstanceId": "i-0028abd045af22747",
                 "InstanceType": "t2.micro",
-                "KeyName": "hepapi-erdem",
+                "KeyName": "*******-erdem",
                 "LaunchTime": "2024-06-13 14:00:25+00:00",
                 "Monitoring": {
                   "State": "disabled"
@@ -222,7 +222,7 @@
                     "Ipv6Addresses": [],
                     "MacAddress": "02:df:0d:27:33:b9",
                     "NetworkInterfaceId": "eni-02f490b0966f9a766",
-                    "OwnerId": "995194808144",
+                    "OwnerId": "123456789012",
                     "PrivateDnsName": "ip-.eu-central-1.compute.internal",
                     "PrivateIpAddress": "",
                     "PrivateIpAddresses": [
@@ -294,7 +294,7 @@
                 "CurrentInstanceBootMode": "legacy-bios"
               }
             ],
-            "OwnerId": "995194808144",
+            "OwnerId": "123456789012",
             "ReservationId": "r-00786fb209d8c60f3"
           },
           {
@@ -305,7 +305,7 @@
                 "ImageId": "ami-04e601abe3e1a910f",
                 "InstanceId": "i-0811408517c16c2a1",
                 "InstanceType": "t3.2xlarge",
-                "KeyName": "hepapi-erdem",
+                "KeyName": "*******-erdem",
                 "LaunchTime": "2024-06-14 06:16:00+00:00",
                 "Monitoring": {
                   "State": "disabled"
@@ -362,7 +362,7 @@
                     "Ipv6Addresses": [],
                     "MacAddress": "02:c3:d8:5b:6f:39",
                     "NetworkInterfaceId": "eni-05f307508c0f9973a",
-                    "OwnerId": "995194808144",
+                    "OwnerId": "123456789012",
                     "PrivateDnsName": "ip-.eu-central-1.compute.internal",
                     "PrivateIpAddress": "",
                     "PrivateIpAddresses": [
@@ -434,7 +434,7 @@
                 "CurrentInstanceBootMode": "legacy-bios"
               }
             ],
-            "OwnerId": "995194808144",
+            "OwnerId": "123456789012",
             "ReservationId": "r-0a15dbbefe332a26a"
           },
           {
@@ -502,7 +502,7 @@
                     "Ipv6Addresses": [],
                     "MacAddress": "02:47:93:a4:7f:81",
                     "NetworkInterfaceId": "eni-0472943dd35ea3333",
-                    "OwnerId": "995194808144",
+                    "OwnerId": "123456789012",
                     "PrivateDnsName": "ip-.eu-central-1.compute.internal",
                     "PrivateIpAddress": "",
                     "PrivateIpAddresses": [
@@ -575,7 +575,7 @@
                 "CurrentInstanceBootMode": "legacy-bios"
               }
             ],
-            "OwnerId": "995194808144",
+            "OwnerId": "123456789012",
             "ReservationId": "r-0d1ca211c2c33d961"
           }
         ],
