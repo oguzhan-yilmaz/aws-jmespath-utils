@@ -14,12 +14,15 @@ Check out the example code:
 
 ## Usage
 
+**Find resources with Name tag set**
+
 ```python
 jmespath.search(  # it's important that your expression array must be inside `` backticks
     '[] | filter_tags(`["Name=*"]`, @)', data_list, options=jmespath_options
 )
 ```
 
+**Find Tag values starting with 123**
 ```python
 jmespath.search(  # it's important that your expression array must be inside `` backticks
     '[].filter_tags(`["=123*"]`, @)', data_list, options=jmespath_options
