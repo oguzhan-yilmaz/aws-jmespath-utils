@@ -104,8 +104,6 @@ class AwsJmespathUtilsCustomFunctions(functions.Functions):
 
             for i, elmt in enumerate(data):
                 if accepted_indices_map[str(i)]:
-                    # return_value.append(elmt)
-                    # rv = elmt.get('Tags') 
                     rv = elmt 
                     return_value.append(rv)
             return return_value
@@ -131,7 +129,6 @@ def test():
     print(
         json.dumps(
             jmespath.search(
-            # '[] | filter_tags(`["="]`, @)',
             'DescribeInstances[*].Reservations[*].Instances[].filter_tags(`["=hum*","=ca*","Te*="]`, @)',
             data,
             options=_jmespath_options),
