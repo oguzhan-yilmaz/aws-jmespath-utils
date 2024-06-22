@@ -17,6 +17,9 @@ Check out the example code:
 **Find resources with 'Name' tag set**
 
 ```python
+import jmespath
+from aws_jmespath_utils import jmespath_options
+
 jmespath.search(  # it's important that your expression array must be inside `` backticks
     '[] | filter_tags(`["Name=*"]`, @)', data_list, options=jmespath_options
 )
@@ -25,6 +28,9 @@ jmespath.search(  # it's important that your expression array must be inside `` 
 **Find tag values starting with 123**
 
 ```python
+import jmespath
+from aws_jmespath_utils import jmespath_options
+
 jmespath.search(  # it's important that your expression array must be inside `` backticks
     '[].filter_tags(`["=123*"]`, @)', data_list, options=jmespath_options
 )
@@ -33,6 +39,9 @@ jmespath.search(  # it's important that your expression array must be inside `` 
 **Find Many tag values**
 
 ```python
+import jmespath
+from aws_jmespath_utils import jmespath_options
+
 jmespath.search(  # it's important that your expression array must be inside `` backticks
     '[].filter_tags(`["=123*", "=jmespath*"]`, @)', data_list, options=jmespath_options
 )
