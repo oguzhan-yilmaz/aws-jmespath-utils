@@ -5,16 +5,16 @@
 ```bash
 pip3 install aws_jmespath_utils
 ```
+
 ## Examples
 
 Check out the example code:
 
 - [examples/01_filter_tags_basic.py](./examples/01_filter_tags_basic.py)
 
-
 ## Usage
 
-**Find resources with Name tag set**
+**Find resources with 'Name' tag set**
 
 ```python
 jmespath.search(  # it's important that your expression array must be inside `` backticks
@@ -22,10 +22,19 @@ jmespath.search(  # it's important that your expression array must be inside `` 
 )
 ```
 
-**Find Tag values starting with 123**
+**Find tag values starting with 123**
+
 ```python
 jmespath.search(  # it's important that your expression array must be inside `` backticks
     '[].filter_tags(`["=123*"]`, @)', data_list, options=jmespath_options
+)
+```
+
+**Find Many tag values**
+
+```python
+jmespath.search(  # it's important that your expression array must be inside `` backticks
+    '[].filter_tags(`["=123*", "=jmespath*"]`, @)', data_list, options=jmespath_options
 )
 ```
 
@@ -34,8 +43,28 @@ jmespath.search(  # it's important that your expression array must be inside `` 
 ```bash
 # set log level as you wish
 export AWS_JMESPATH_UTILS_LOG_LEVEL="DEBUG"   
-export AWS_JMESPATH_UTILS_LOG_LEVEL="WARNING"   
 export AWS_JMESPATH_UTILS_LOG_LEVEL="INFO"  # default   
 ```
 
 
+
+## Python Library Usage
+
+```python
+import jmespath
+from aws_jmespath_utils import jmespath_options
+import json
+data_list = [    
+    {"a": "a", "Tags": [{"Key": "Name", "Value": "jmespath-utils"}, ]},
+    {"b": "b", "Tags": [{"Key": "Nam", "Value": "jmespath-utils-nam"}]},
+    {"c": "c", "Tags": [{"Key": "map-migrated", "Value": "234"}]}
+]
+
+print(
+    json.dumps(
+        jmespath.search('[] | filter_tags(`["Name=*"]`, @)', data_list, options=jmespath_options),
+        indent=2
+    )
+)
+
+```
