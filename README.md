@@ -11,6 +11,7 @@ pip3 install aws_jmespath_utils
 Check out the example code:
 
 - [examples/01_filter_tags_basic.py](./examples/01_filter_tags_basic.py)
+- [examples/02_filter_tags_exclude.py](./examples/02_filter_tags_exclude.py)
 
 ## Usage
 
@@ -35,6 +36,14 @@ jmespath.search(  # it's important that your expression array must be inside `` 
 ```python
 jmespath.search(  # it's important that your expression array must be inside `` backticks
     '[].filter_tags(`["=123*", "=jmespath*"]`, @)', data_list, options=jmespath_options
+)
+```
+
+**Exclude Tags**
+
+```python
+jmespath.search(  # it's important that your expression array must be inside `` backticks
+    '[].exclude_tags(`["map-migrated=*"]`, @)', data_list, options=jmespath_options
 )
 ```
 
@@ -63,6 +72,13 @@ data_list = [
 print(
     json.dumps(
         jmespath.search('[] | filter_tags(`["Name=*"]`, @)', data_list, options=jmespath_options),
+        indent=2
+    )
+)
+
+print(
+    json.dumps(
+        jmespath.search('[] | exclude_tags(`["Nam*="]`, @)', data_list, options=jmespath_options),
         indent=2
     )
 )
