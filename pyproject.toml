@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aws_jmespath_utils"
-version = "0.1.13"
+version = "0.2.2"
 description = "jmespath custom functions for filtering AWS resources by tag"
 authors = ["Oguzhan Yilmaz <oguzhanylmz271@gmail.com>"]
 readme = "README.md"
