@@ -1,4 +1,4 @@
-from common import (
+from .common import (
     get_tags_of_data,
     is_accepted
 )
